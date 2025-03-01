@@ -1,0 +1,369 @@
+/* Importa il font Montserrat da Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Reset generale */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Stili di base per il body */
+body {
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #F3F3F5;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #F3F3F5;
+}
+
+.header-logo img {
+  height: 50px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #2A3D1F;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+  color: #6A994E;
+}
+
+/* HERO SECTION */
+.hero {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /*Copre l'intera altezza del rettangolo */
+  z-index: 1;
+  opacity: 0.8; /*Opacità per migliorare la leggibilità del testo */
+}
+
+.lupi-image {
+  width: 110%;
+  height: auto;
+  object-fit: cover;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  top: 0;
+}
+
+.hero-image:not(.lupi-image) {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  padding: 0px;
+  margin: 100px 0px 0px 0px/* Top, Right, Bottom, Left */;
+  position: absolute;
+  top: 0;
+}
+
+.hero-container {
+  background-color: #2A3D1F; /* Rettangolo verde */
+  width: 95%;
+  max-width: 1342px;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  min-height: 780px;
+  margin-top: 90px;
+}
+
+.hero-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: url("img/montagna-home.jpg") no-repeat center/cover;
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  padding: 50px 50px 40px 40px;
+}
+
+.hero-text h1 {
+  font-size: 80px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* SEZIONE PARCHI */
+/* Contenitore delle Card */
+.parchi-container {
+  width: 81.5%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonne */
+  gap: 40px; /* Spazio tra le card */
+  align-items: stretch; /* Forza tutte le card ad avere la stessa altezza */
+}
+
+/* Stile della Card */
+.parco-card {
+  background-color: #F3F3F5; /* Sfondo grigio chiaro */
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+  display: flex;
+  flex-direction: column; /* Organizza il contenuto in colonna */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transizione per l'effetto hover */
+}
+
+/* Effetto Hover sulla Card */
+.parco-card:hover {
+  transform: translateY(-10px); /* Solleva leggermente la card */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta l'ombra */
+}
+
+/* Immagine della Card */
+.parco-card img {
+  width: 100%;
+  height: 200px; /* Altezza fissa per l'immagine */
+  object-fit: cover; /* Copertura dell'immagine */
+}
+
+/* Contenuto della Card */
+.parco-card h2 {
+  font-size: 24px; /* Dimensione del titolo */
+  margin: 20px 15px 10px; /* Spaziatura */
+  color: black; /* Colore verde scuro */
+  font-weight: 700; /* Grassetto */
+}
+
+.parco-card p {
+  font-size: 16px; /* Dimensione del testo */
+  margin: 0 15px 20px; /* Spaziatura */
+  color: #333; /* Colore del testo */
+  line-height: 1.5; /* Interlinea */
+  flex-grow: 1; /* Fai espandere il paragrafo per riempire lo spazio */
+}
+
+/* Footer della Card */
+.card-footer {
+  background-color: #6A994E; /* Sfondo verde */
+  padding: 15px;
+  text-align: center; /* Testo centrato */
+  transition: background-color 0.3s ease; /* Transizione per l'effetto hover */
+}
+
+/* Effetto Hover sul Footer */
+.parco-card:hover .card-footer {
+  background-color: #2A3D1F; /* Cambia colore del footer al passaggio del mouse */
+}
+
+.card-link {
+  color: white; /* Testo bianco */
+  text-decoration: none; /* Rimuove la sottolineatura */
+  font-weight: 700; /* Grassetto */
+  font-size: 16px; /* Dimensione del testo */
+  font-family: 'Montserrat', sans-serif; /* Font Montserrat */
+  transition: color 0.3s ease; /* Transizione per l'effetto hover */
+}
+
+/* Effetto Hover sul Link */
+.parco-card:hover .card-link {
+  color: #F3F3F5; /* Cambia colore del testo al passaggio del mouse */
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+/* SEZIONE FLORA & FAUNA, ATTIVITÀ, PARCHI, ETC. */
+.parks, .activities, .floras, .etnas, .granps, .polls, .dols {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 5%; /* Spaziatura esterna */
+}
+
+.park, .activity, .flora, .etna, .granp, .poll, .dol {
+  background-color: #f3f3f5;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 1342px;
+}
+
+/* Immagine dello stambecco (width: 20%) */
+.park .stambecco-home {
+  width: 25%; /* Larghezza ridotta al 20% */
+  height: auto;
+  object-fit: cover;
+}
+
+.flora img {
+  width: 20%;
+  height: auto;
+  object-fit: cover;
+}
+
+.park img:not(.stambecco-home), .activity img, .etna img, .granp img, .poll img, .dol img {
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+}
+.flora-info {
+  padding: 50px 50px 50px 40px; /* Top, Right, Bottom, Left */
+  height: auto;
+  object-fit: cover;
+}
+/* Riduci il padding sinistro del testo */
+.park-info, .activity-info, .etna-info, .granp-info, .poll-info, .dol-info {
+  padding: 50px 50px 50px 40px; /* Top, Right, Bottom, Left */
+  width: 60%;
+}
+
+.parkk-info {
+  padding: 50px 50px 50px 40px; /* Top, Right, Bottom, Left */
+  width: 100%;
+  
+}
+
+/* Padding ridotto solo per la sezione dello stambecco */
+.park.stambecco-section .park-info {
+  padding-left: 20px; /* Riduci il padding sinistro solo qui */
+}
+
+.park-info h2, .parkk-info h2, .activity-info h2, .flora-info h2, .etna-info h2, .granp-info h2, .poll-info h2, .dol-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.park-info p, .parkk-info p, .activity-info p, .flora-info p, .etna-info p, .granp-info p, .poll-info p, .dol-info p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Rettangoli verdi specifici per le pagine dei parchi */
+.etnass, .granpss, .pollss, .dolss {
+  background-color: #2A3D1F; /* Rettangolo verde */
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 1342px;
+}
+
+.etnass-infoss, .granpss-infoss, .pollss-infoss, .dolss-infoss {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: white;
+  padding: 10px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #2A3D1F;
+  color: white;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+.btn:hover {
+background-color: #6A994E; /* Effetto hover */
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #2A3D1F;
+  color: white;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+.btn:hover {
+background-color: #6A994E; /* Effetto hover */
+}
+
+
+
+/* FOOTER */
+.site-footer {
+  background-color: #2A3D1F;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsività di base */
+@media (max-width: 768px) {
+  .attivita-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .attivita-content,
+  .attivita-image {
+    max-width: 100%;
+  }
+  .attivita-image img {
+    margin-top: 20px;
+  }
+}
