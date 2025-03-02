@@ -13,6 +13,7 @@
 body {
   background-color: #ffffff;
   color: #333;
+  font-size: 16px; /* Dimensione del testo di base */
 }
 
 /* HEADER */
@@ -71,9 +72,9 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /*Copre l'intera altezza del rettangolo */
+  height: 100%;
   z-index: 1;
-  opacity: 0.8; /*Opacità per migliorare la leggibilità del testo */
+  opacity: 0.8;
 }
 
 .lupi-image {
@@ -91,13 +92,13 @@ header {
   height: auto;
   object-fit: cover;
   padding: 0px;
-  margin: 100px 0px 0px 0px/* Top, Right, Bottom, Left */;
+  margin: 100px 0px 0px 0px;
   position: absolute;
   top: 0;
 }
 
 .hero-container {
-  background-color: #2A3D1F; /* Rettangolo verde */
+  background-color: #2A3D1F;
   width: 95%;
   max-width: 1342px;
   position: relative;
@@ -137,80 +138,72 @@ header {
 }
 
 /* SEZIONE PARCHI */
-/* Contenitore delle Card */
 .parchi-container {
   width: 81.5%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 colonne */
-  gap: 40px; /* Spazio tra le card */
-  align-items: stretch; /* Forza tutte le card ad avere la stessa altezza */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  align-items: stretch;
 }
 
-/* Stile della Card */
 .parco-card {
-  background-color: #F3F3F5; /* Sfondo grigio chiaro */
+  background-color: #F3F3F5;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-direction: column; /* Organizza il contenuto in colonna */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transizione per l'effetto hover */
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Effetto Hover sulla Card */
 .parco-card:hover {
-  transform: translateY(-10px); /* Solleva leggermente la card */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta l'ombra */
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Immagine della Card */
 .parco-card img {
   width: 100%;
-  height: 200px; /* Altezza fissa per l'immagine */
-  object-fit: cover; /* Copertura dell'immagine */
+  height: 200px;
+  object-fit: cover;
 }
 
-/* Contenuto della Card */
 .parco-card h2 {
-  font-size: 24px; /* Dimensione del titolo */
-  margin: 20px 15px 10px; /* Spaziatura */
-  color: black; /* Colore verde scuro */
-  font-weight: 700; /* Grassetto */
+  font-size: 24px;
+  margin: 20px 15px 10px;
+  color: black;
+  font-weight: 700;
 }
 
 .parco-card p {
-  font-size: 16px; /* Dimensione del testo */
-  margin: 0 15px 20px; /* Spaziatura */
-  color: #333; /* Colore del testo */
-  line-height: 1.5; /* Interlinea */
-  flex-grow: 1; /* Fai espandere il paragrafo per riempire lo spazio */
+  font-size: 16px;
+  margin: 0 15px 20px;
+  color: #333;
+  line-height: 1.5;
+  flex-grow: 1;
 }
 
-/* Footer della Card */
 .card-footer {
-  background-color: #6A994E; /* Sfondo verde */
+  background-color: #6A994E;
   padding: 15px;
-  text-align: center; /* Testo centrato */
-  transition: background-color 0.3s ease; /* Transizione per l'effetto hover */
+  text-align: center;
+  transition: background-color 0.3s ease;
 }
 
-/* Effetto Hover sul Footer */
 .parco-card:hover .card-footer {
-  background-color: #2A3D1F; /* Cambia colore del footer al passaggio del mouse */
+  background-color: #2A3D1F;
 }
 
 .card-link {
-  color: white; /* Testo bianco */
-  text-decoration: none; /* Rimuove la sottolineatura */
-  font-weight: 700; /* Grassetto */
-  font-size: 16px; /* Dimensione del testo */
-  font-family: 'Montserrat', sans-serif; /* Font Montserrat */
-  transition: color 0.3s ease; /* Transizione per l'effetto hover */
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  transition: color 0.3s ease;
 }
 
-/* Effetto Hover sul Link */
 .parco-card:hover .card-link {
-  color: #F3F3F5; /* Cambia colore del testo al passaggio del mouse */
+  color: #F3F3F5;
 }
 
 .card-link:hover {
@@ -222,7 +215,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 5%; /* Spaziatura esterna */
+  padding: 40px 5%;
 }
 
 .park, .activity, .flora, .etna, .granp, .poll, .dol {
@@ -236,9 +229,8 @@ header {
   max-width: 1342px;
 }
 
-/* Immagine dello stambecco (width: 20%) */
 .park .stambecco-home {
-  width: 25%; /* Larghezza ridotta al 20% */
+  width: 25%;
   height: auto;
   object-fit: cover;
 }
@@ -254,26 +246,25 @@ header {
   height: auto;
   object-fit: cover;
 }
+
 .flora-info {
-  padding: 50px 50px 50px 40px; /* Top, Right, Bottom, Left */
+  padding: 50px 50px 50px 40px;
   height: auto;
   object-fit: cover;
 }
-/* Riduci il padding sinistro del testo */
+
 .park-info, .activity-info, .etna-info, .granp-info, .poll-info, .dol-info {
-  padding: 50px 50px 50px 40px; /* Top, Right, Bottom, Left */
+  padding: 50px 50px 50px 40px;
   width: 60%;
 }
 
 .parkk-info {
-  padding: 50px 50px 50px 40px; /* Top, Right, Bottom, Left */
+  padding: 50px 50px 50px 40px;
   width: 100%;
-  
 }
 
-/* Padding ridotto solo per la sezione dello stambecco */
 .park.stambecco-section .park-info {
-  padding-left: 20px; /* Riduci il padding sinistro solo qui */
+  padding-left: 20px;
 }
 
 .park-info h2, .parkk-info h2, .activity-info h2, .flora-info h2, .etna-info h2, .granp-info h2, .poll-info h2, .dol-info h2 {
@@ -286,9 +277,8 @@ header {
   margin-bottom: 15px;
 }
 
-/* Rettangoli verdi specifici per le pagine dei parchi */
 .etnass, .granpss, .pollss, .dolss {
-  background-color: #2A3D1F; /* Rettangolo verde */
+  background-color: #2A3D1F;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -313,23 +303,10 @@ header {
   padding: 10px 15px;
   font-weight: bold;
 }
+
 .btn:hover {
-background-color: #6A994E; /* Effetto hover */
+  background-color: #6A994E;
 }
-
-.btn {
-  display: inline-block;
-  text-decoration: none;
-  background-color: #2A3D1F;
-  color: white;
-  padding: 10px 15px;
-  font-weight: bold;
-}
-.btn:hover {
-background-color: #6A994E; /* Effetto hover */
-}
-
-
 
 /* FOOTER */
 .site-footer {
@@ -353,17 +330,100 @@ background-color: #6A994E; /* Effetto hover */
   text-decoration: underline;
 }
 
-/* Responsività di base */
+/* Responsività */
+@media (max-width: 1024px) {
+  .parchi-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonne per tablet */
+    gap: 20px;
+  }
+}
+
 @media (max-width: 768px) {
-  .attivita-container {
+  .site-header {
+    padding: 10px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-nav a {
+    font-size: 14px;
+  }
+
+  .hero-container {
+    min-height: 500px;
+    margin-top: 60px;
+  }
+
+  .hero-text {
+    padding: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+  }
+
+  .parchi-container {
+    grid-template-columns: 1fr; /* 1 colonna per dispositivi mobili */
+  }
+
+  .parco-card {
+    margin-bottom: 20px;
+  }
+
+  .parco-card img {
+    height: 150px;
+  }
+
+  .parco-card h2 {
+    font-size: 20px;
+  }
+
+  .parco-card p {
+    font-size: 14px;
+  }
+
+  .park, .activity, .flora, .etna, .granp, .poll, .dol {
     flex-direction: column;
     text-align: center;
   }
-  .attivita-content,
-  .attivita-image {
-    max-width: 100%;
+
+  .park img:not(.stambecco-home), .activity img, .flora img, .etna img, .granp img, .poll img, .dol img {
+    width: 100%;
+    margin-bottom: 20px;
   }
-  .attivita-image img {
-    margin-top: 20px;
+
+  .park-info, .activity-info, .flora-info, .etna-info, .granp-info, .poll-info, .dol-info {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .park-info h2, .activity-info h2, .flora-info h2, .etna-info h2, .granp-info h2, .poll-info h2, .dol-info h2 {
+    font-size: 1.25rem;
+  }
+
+  .park-info p, .activity-info p, .flora-info p, .etna-info p, .granp-info p, .poll-info p, .dol-info p {
+    font-size: 0.9rem;
+  }
+
+  .site-footer {
+    padding: 15px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-links a {
+    margin: 5px 0;
   }
 }
